@@ -7,7 +7,7 @@ Featuring:
 - Docker Machine v0.6.0
 - Python 3.5
 
-Blog post -> https://realpython.com/blog/python/django-development-with-docker-compose-and-machine/
+Original Blog post -> https://realpython.com/blog/python/django-development-with-docker-compose-and-machine/
 
 ### OS X Instructions
 
