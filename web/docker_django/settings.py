@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # apps
     'docker_django.apps.todo',
+    'docker_django.apps.quiz',
 )
 
 MIDDLEWARE_CLASSES = (

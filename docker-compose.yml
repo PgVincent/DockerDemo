@@ -7,12 +7,11 @@ web:
     - postgres:postgres
     - redis:redis
   volumes:
-    - /usr/src/app
-    - /usr/src/app/static
+    - ./web:/usr/src/app
   env_file: .env
   environment:
     DEBUG: 'true'
-  command: /usr/local/bin/gunicorn docker_django.wsgi:application -w 2 -b :8000 --reload 1 --access-logfile gunicorn.log
+  command: /usr/local/bin/gunicorn docker_django.wsgi:application -w 4 -b :8000 --reload  --access-logfile gunicorn.log
 
 nginx:
   restart: always
