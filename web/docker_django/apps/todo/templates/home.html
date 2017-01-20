@@ -5,10 +5,7 @@
 
 <div class="text-center">
   {% load staticfiles %}
-  <br>
-  <img src="http://media.django.es.s3.amazonaws.com/nuevo/images/djangopony.png">
-  <br>
-  <p>This page has been  viewed <strong>{{counter}}</strong> times!</p>
+  <p>This page has been viewed <strong>{{counter}}</strong> times!</p>
 </div>
 
 <br>
@@ -26,7 +23,7 @@
 
 <div>
   {% for item in items %}
-    <h4 class="well"><strong>{{item.text}}</strong> - <em>{{item.date_posted}}</em></h4>
+    <h4 class="well"><strong>{{item.text}}</strong> - <em>{{item.date_posted}}</em><a href="/like">like</a></h4>
   {% endfor %}
 </div>
 

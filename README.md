@@ -1,5 +1,8 @@
 ## Django Development With Docker Compose and Machine
 
+Grappelli admin
+- http://django-grappelli.readthedocs.io/en/latest/quickstart.html#installation
+ pip3 install django-grappelli
 Featuring:
 
 - Docker v1.10.3

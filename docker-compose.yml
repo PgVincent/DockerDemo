@@ -1,3 +1,20 @@
+#ng2:
+#  # use the image that's clean, ready to do the live coding demo
+#  image: andrewconnell/pres-ng2-officeaddin:ng2-demo-start
+#  ports:
+#    - "443:3433"
+#  # map the current folder root on HOST => CONTAINER so container will
+#  #   use files from HOST as I code locally
+#  # but leave node_modules & typings in the container so don't have to
+#  #   download them again
+#  volumes:
+#    - ./src:/ac/demo/src
+#  # run TSC in watch mode & node in debug mode
+#  command: npm run dev
+
+#node:
+#  build: ./node
+
 web:
   restart: always
   build: ./web
@@ -11,7 +28,7 @@ web:
   env_file: .env
   environment:
     DEBUG: 'true'
-  command: /usr/local/bin/gunicorn docker_django.wsgi:application -w 4 -b :8000 --reload  --access-logfile gunicorn.log
+  command: /usr/local/bin/gunicorn docker_django.wsgi:application -w 4 -b :8000 --reload --access-logfile gunicorn.log
 
 nginx:
   restart: always
